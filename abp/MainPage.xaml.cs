@@ -13,7 +13,7 @@ namespace abp
 
         private async void OnPerfilTapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PerfilPage());
+            await Navigation.PushAsync(new configuracion());
         }
 
         private async void OntrofeosClicked(object sender, EventArgs e)

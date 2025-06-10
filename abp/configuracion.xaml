@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.configuracion"
+             BackgroundColor="#D8E0F0"
+             Padding="20">
+
+    <StackLayout>
+
+        <!-- Título -->
+        <Label Text="Configuracion"
+               FontSize="24"
+               HorizontalOptions="Center"
+               TextColor="Black"
+               Margin="0,20,0,10"/>
+
+        <!-- Botón regresar -->
+        <ImageButton Source="back_arrow.png"
+                     HeightRequest="30"
+                     WidthRequest="30"
+                     BackgroundColor="Transparent"
+                     HorizontalOptions="Start"
+                     Clicked="OnBackButtonClicked"/>
+
+        <!-- Opciones de configuración -->
+        <StackLayout Margin="0,20,0,0" Spacing="10">
+
+            <Button Text="Cuenta"
+                    BackgroundColor="#75A7E5"
+                    TextColor="Black"
+                    Clicked="OnCuentaClicked"/>
+
+            <Button Text="Accesibilidad"
+                    BackgroundColor="#75A7E5"
+                    TextColor="Black"
+                    Clicked="OnAccesibilidadClicked"/>
+
+            <Button Text="Normas Comunitarias"
+                    BackgroundColor="#75A7E5"
+                    TextColor="Black"
+                    Clicked="OnNormasClicked"/>
+
+            <Button Text="Permisos"
+                    BackgroundColor="#75A7E5"
+                    TextColor="Black"
+                    Clicked="OnPermisosClicked"/>
+
+            <Button Text="Cambiar de Tema"
+                    BackgroundColor="#75A7E5"
+                    TextColor="Black"
+                    Clicked="OnTemaClicked"/>
+
+            <Button Text="Ayuda"
+                    BackgroundColor="#75A7E5"
+                    TextColor="Black"
+                    Clicked="OnAyudaClicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
