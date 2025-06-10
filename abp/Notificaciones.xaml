@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.NotificacionesPage"
+             x:Name="Pagina"
+             BackgroundColor="#D8E1F0"
+             Title="Notificaciones">
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Encabezado -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Grid.Row="0" Margin="0,20,0,10">
+            <Image Source="back_icon.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBackTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Notificaciones"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Lista de notificaciones -->
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Notificaciones}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="10" HasShadow="True" BorderColor="Black">
+                        <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                            <Image Source="{Binding Imagen}" WidthRequest="40" HeightRequest="40"/>
+                            <Label Grid.Column="1"
+                                   Text="{Binding Nombre}"
+                                   VerticalOptions="Center"
+                                   FontSize="16"
+                                   Margin="10,0"/>
+                            <ImageButton Grid.Column="2"
+                                         Source="{Binding IconoCampana}"
+                                         WidthRequest="24"
+                                         HeightRequest="24"
+                                         BackgroundColor="Transparent"
+                                         Command="{Binding BindingContext.ToggleNotificacionesCommand, Source={x:Reference Pagina}}"
+                                         CommandParameter="{Binding}" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

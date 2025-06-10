@@ -15,6 +15,14 @@ namespace abp
         {
             await Navigation.PushAsync(new configuracion());
         }
+        private async void OnNotificacionesTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NotificacionesPage());
+        }
+        private async void OnBusquedaTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new buscador());
+        }
 
         private async void OntrofeosClicked(object sender, EventArgs e)
         {
