@@ -13,11 +13,11 @@
             <!-- Logros obtenidos -->
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
                 <StackLayout>
-                    <Image Source="trofeo_bronce.png" HeightRequest="100" WidthRequest="100"/>
+                    <Image Source="https://static.vecteezy.com/system/resources/previews/021/970/088/non_2x/award-trophy-goblet-bronze-cup-in-flat-design-free-png.png" HeightRequest="100" WidthRequest="100"/>
                     <Label Text="Copa de bronce" FontSize="14" HorizontalOptions="Center"/>
                 </StackLayout>
                 <StackLayout>
-                    <Image Source="escudo_nivel1.png" HeightRequest="100" WidthRequest="100"/>
+                    <Image Source="https://static.vecteezy.com/system/resources/previews/011/811/854/non_2x/bronze-shield-badge-free-png.png" HeightRequest="100" WidthRequest="100"/>
                     <Label Text="Nivel 1" FontSize="14" HorizontalOptions="Center"/>
                 </StackLayout>
             </StackLayout>
@@ -34,11 +34,11 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
                 <StackLayout>
-                    <Image Source="trofeo_plata.png" HeightRequest="100" WidthRequest="100"/>
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/2502/2502698.png" HeightRequest="100" WidthRequest="100"/>
                     <Label Text="Copa de plata" FontSize="14" HorizontalOptions="Center"/>
                 </StackLayout>
                 <StackLayout>
-                    <Image Source="escudo_nivel15.png" HeightRequest="100" WidthRequest="100"/>
+                    <Image Source="https://images.vexels.com/media/users/3/134519/isolated/preview/02029c4458d8f446a887015d030acca1-etiqueta-de-escudo-emblema-3d.png?w=360" HeightRequest="100" WidthRequest="100"/>
                     <Label Text="Nivel 15–30" FontSize="14" HorizontalOptions="Center"/>
                 </StackLayout>
             </StackLayout>

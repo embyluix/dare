@@ -32,7 +32,7 @@ namespace abp
         }
         private async void OnImageTapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new prueba());
+            await Navigation.PushAsync(new buscador());
         }
     }
 }
