@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using abp;
 using Xamarin.Forms;
 
@@ -15,25 +10,29 @@ namespace abp
         {
             InitializeComponent();
         }
-        private async void trofeos(object sender, EventArgs e)
+
+        private async void OnPerfilTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PerfilPage());
+        }
+
+        private async void OntrofeosClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LogrosPage());
+        }
+
+        private async void OnHistorialTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HistorialBancarioPage());
+        }
+
+        private async void OnEventoTapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Evento", "Has tocado el evento.", "OK");
         }
         private async void OnImageTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new prueba());
         }
-
-        private async void perfil(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PerfilPage());
-        }
-        private async void historial(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new HistorialBancarioPage());
-        }
-
-
     }
-
 }

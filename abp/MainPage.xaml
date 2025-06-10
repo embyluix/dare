@@ -2,86 +2,104 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="abp.MainPage"
-             BackgroundColor="#d0d8f4"
-             Title="abp1">
+             BackgroundColor="#D6E1FF"
+             Title="DARE">
 
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="60" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <StackLayout Orientation="Horizontal" Padding="20,40,20,10" HorizontalOptions="FillAndExpand" Grid.Row="0" Spacing="15">
-            <Label Text="DARE" FontAttributes="Bold" FontSize="20"/>
-            <Image Source="logo_placeholder.png" HeightRequest="30" WidthRequest="30"/>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="15">
-                <Image Source="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" HeightRequest="24" WidthRequest="24">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="perfil"/>
-                    </Image.GestureRecognizers>
-                </Image>
-                <Image Source="https://img.icons8.com/ios7/512/search.png" HeightRequest="24" WidthRequest="24"/>
-                <Image Source="https://static-00.iconduck.com/assets.00/bell-icon-1715x2048-hael7mhz.png" HeightRequest="24" WidthRequest="24"/>
-                <Image Source="https://cdn-icons-png.flaticon.com/512/7216/7216128.png" HeightRequest="24" WidthRequest="24"/>
+        <Grid Padding="10" ColumnSpacing="10" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DARE" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Image Source="logo_placeholder.png" HeightRequest="30" WidthRequest="30" Grid.Column="1"/>
+            <StackLayout Orientation="Horizontal" Grid.Column="2">
+                <Label x:Name="PerfilLabel" Text="👤 🔍 🔔 ☰" FontSize="18" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPerfilTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
-        </StackLayout>
+        </Grid>
 
-        <!-- Scrollable Content -->
+        <!-- Scrollable Cards -->
         <ScrollView Grid.Row="1">
-            <StackLayout Padding="20" Spacing="20">
-                <!-- Card -->
-                <Frame CornerRadius="15" BackgroundColor="#85a9e6" Padding="15">
-                    <StackLayout>
-                        <Label Text="donacion de alimentos" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"/>
-                        <Grid ColumnSpacing="10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+            <StackLayout Padding="10" Spacing="20">
+                <!-- CARD 1 -->
+                <Frame BackgroundColor="#A9C9FF" CornerRadius="20" Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEventoTapped"/>
+                    </Frame.GestureRecognizers>
 
-                            <Image Grid.Column="0" Source="food_image_placeholder.png" WidthRequest="100" HeightRequest="80"/>
+                    <StackLayout Spacing="10">
+                        <Image Source="Donacion.jpg" Aspect="AspectFill" HeightRequest="150"/>
+                        <Label Text="Donación de alimentos"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="Black"/>
+                        <Label Text="El propósito del evento es brindar alimentos de forma voluntaria."
+                               FontSize="12"
+                               TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Button Text="DONAR" BackgroundColor="LightGreen" TextColor="Black"/>
+                            <Button Text="REGISTRARSE" BackgroundColor="LightGray" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Label Text="♡ 🗨️ ❓" FontSize="18"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
 
-                            <Label Grid.Column="1" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." VerticalOptions="Center"/>
+                <!-- CARD 2 -->
+                <Frame BackgroundColor="#A9C9FF" CornerRadius="20" Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEventoTapped"/>
+                    </Frame.GestureRecognizers>
 
-                            <StackLayout Grid.Column="2" VerticalOptions="Center" Spacing="10">
-                                <Image Source="icon_heart.png" WidthRequest="24"/>
-                                <Image Source="icon_comment.png" WidthRequest="24"/>
-                                <Image Source="icon_help.png" WidthRequest="24"/>
-                            </StackLayout>
-                        </Grid>
-
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10" Margin="0,10,0,0">
-                            <Button Text="donar" BackgroundColor="LightGreen" />
-                            <Button Text="registrarse" BackgroundColor="#b0c4f2" />
+                    <StackLayout Spacing="10">
+                        <Image Source="Donacion.jpg" Aspect="AspectFill" HeightRequest="150"/>
+                        <Label Text="Donación de alimentos"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="Black"/>
+                        <Label Text="El propósito del evento es brindar alimentos de forma voluntaria."
+                               FontSize="12"
+                               TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Button Text="DONAR" BackgroundColor="LightGreen" TextColor="Black"/>
+                            <Button Text="REGISTRARSE" BackgroundColor="LightGray" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Label Text="♡ 🗨️ ❓" FontSize="18"/>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
             </StackLayout>
         </ScrollView>
 
-        <!-- Footer -->
-        <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="#9eefff" HeightRequest="60" HorizontalOptions="FillAndExpand" Spacing="20" Padding="20,0">
-            <Image Source="https://cdn-icons-png.flaticon.com/512/858/858151.png" HeightRequest="48"/>
-            <Image Source="https://icones.pro/wp-content/uploads/2022/03/historique-icone-de-l-historique-noir.png" HeightRequest="48">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer Tapped="historial"/>
-            </Image.GestureRecognizers>
-            </Image>
-            <Image Source="https://cdn-icons-png.flaticon.com/512/2741/2741742.png" HeightRequest="48"/>
-            <Image Source="https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png" HeightRequest="48">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnImageTapped"/>
-                </Image.GestureRecognizers>
-            </Image>
-             <!-- Imagen con navegación -->
-            <Image Source="https://cdn-icons-png.flaticon.com/512/819/819590.png" HeightRequest="48">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="trofeos"/>
-                </Image.GestureRecognizers>
-            </Image>
+        <!-- Bottom Navigation -->
+        <StackLayout Grid.Row="2"
+                     Orientation="Horizontal"
+                     BackgroundColor="#A1F3FF"
+                     HeightRequest="60"
+                     HorizontalOptions="FillAndExpand"
+                     Padding="0"
+                     Spacing="0"
+                     VerticalOptions="End">
+            <Button Text="💵" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnHistorialTapped"  />
+            <Button Text="↩️" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand"  />
+            <Button Text="➕" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" />
+            <Button Text="♡" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnImageTapped"/>
+            <Button Text="🏆" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OntrofeosClicked"/>
         </StackLayout>
     </Grid>
 </ContentPage>
