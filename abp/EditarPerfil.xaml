@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.EditarPerfilPage"
+             Title="Editar perfil"
+             BackgroundColor="#d0d8f4">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20" HorizontalOptions="Center">
+
+            <Label Text="Editar perfil" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Imagen de perfil -->
+            <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" Padding="0" HasShadow="True">
+                <Image x:Name="ProfileImage" Aspect="AspectFill"/>
+            </Frame>
+
+            <Button Text="Editar foto" Clicked="OnEditPhotoClicked" BackgroundColor="#99b3ff" TextColor="White" />
+
+            <!-- Nombre -->
+            <Label Text="Nombre:" FontAttributes="Bold"/>
+            <Entry x:Name="NombreEntry" Placeholder="Nombre de usuario"/>
+
+            <!-- Descripción -->
+            <Label Text="Descripción:" FontAttributes="Bold"/>
+            <Editor x:Name="DescripcionEditor" HeightRequest="100" BackgroundColor="White"/>
+
+            <Button Text="Aceptar" Clicked="OnGuardarClicked" BackgroundColor="#99b3ff" TextColor="White" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.HistorialBancarioPage"
+             Title="Historial de Donaciones"
+             BackgroundColor="#d0d8f4">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label Text="Historial de Donaciones"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Contenedor de donaciones -->
+            <StackLayout x:Name="DonacionesLayout"
+                         Spacing="15">
+                <!-- Aquí se agregarán dinámicamente los frames -->
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

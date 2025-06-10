@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.PerfilPage"
+             Title="Tu perfil"
+             BackgroundColor="#d0d8f4">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20" HorizontalOptions="Center">
+
+            <Label Text="Tu perfil" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Imagen de perfil -->
+            <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" Padding="0" HasShadow="True">
+                <Image x:Name="ProfileImage" Aspect="AspectFill"/>
+            </Frame>
+
+            <!-- Nombre -->
+            <Label x:Name="NombreLabel" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" />
+
+            <!-- Descripción -->
+            <Label Text="Descripción:" FontAttributes="Bold"/>
+            <Label x:Name="DescripcionLabel" TextColor="Black" />
+
+            <!-- Botón para editar -->
+            <Button Text="Editar perfil" Clicked="OnEditarPerfilClicked" BackgroundColor="#99b3ff" TextColor="White" />
+
+            <!-- Logros -->
+            <Label Text="Logros" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="nivel 2" FontSize="18" HorizontalOptions="Center"/>
+                <Image Source="https://cdn.creazilla.com/emojis/57638/shield-emoji-clipart-md.png" HeightRequest="100" WidthRequest="100"/>
+            </StackLayout>
+
+            <!-- Causas Apoyadas -->
+            <Label Text="Causas apoyadas" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Image Source="causa_recogida.png" HeightRequest="100" Aspect="AspectFill"/>
+                    <Label Text="Recogida de basura" FontAttributes="Bold" FontSize="16"/>
+                    <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." FontSize="14"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+                        <Button Text="Donar" BackgroundColor="#66cc66" TextColor="White" CornerRadius="10"/>
+                        <Button Text="Registrarse" BackgroundColor="#6699cc" TextColor="White" CornerRadius="10"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

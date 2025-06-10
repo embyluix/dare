@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.LogrosPage"
+             Title="Logros"
+             BackgroundColor="#d0d8f4">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label Text="Logros" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Logros obtenidos -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+                <StackLayout>
+                    <Image Source="trofeo_bronce.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Copa de bronce" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="escudo_nivel1.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Nivel 1" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Progreso -->
+            <Label Text="Donaciones dadas 25%-100%" FontAttributes="Bold" />
+            <ProgressBar Progress="0.25" HeightRequest="20" BackgroundColor="LightGray" ProgressColor="#4d79ff"/>
+
+            <Label Text="Voluntariados asistidos 50%-100%" FontAttributes="Bold" />
+            <ProgressBar Progress="0.5" HeightRequest="20" BackgroundColor="LightGray" ProgressColor="#4d79ff"/>
+
+            <!-- Metas -->
+            <Label Text="Metas a lograr:" FontAttributes="Bold" FontSize="18"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+                <StackLayout>
+                    <Image Source="trofeo_plata.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Copa de plata" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="escudo_nivel15.png" HeightRequest="100" WidthRequest="100"/>
+                    <Label Text="Nivel 15–30" FontSize="14" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
