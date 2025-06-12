@@ -1,0 +1,85 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.TuEventoPage"
+             Title="Tu Evento"
+             BackgroundColor="#DCE6F9">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <!-- Botón de regreso -->
+            <Image Source="back_arrow.png" HeightRequest="24" WidthRequest="24" />
+
+            <!-- Título -->
+            <Label Text="Tu Evento"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Nombre del evento -->
+            <Label Text="Nombre del Evento" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Label x:Name="nombreEventoLabel" FontSize="16" TextColor="Black" />
+
+            <!-- Teléfono -->
+            <Label Text="Teléfono" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Label x:Name="telefonoLabel" FontSize="16" TextColor="Black" />
+
+            <!-- Donaciones -->
+            <Label Text="¿Acepta Donaciones?" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Label x:Name="donacionesLabel" FontSize="16" TextColor="Black" />
+
+            <!-- Imagen -->
+            <Label Text="Imagen del Evento" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Image x:Name="eventoImagen" HeightRequest="150" Aspect="AspectFill" />
+
+            <!-- Descripción -->
+            <Label Text="Descripción del Evento" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Label x:Name="descripcionLabel" FontSize="16" TextColor="Black" />
+
+            <!-- Fecha -->
+            <Label Text="Fecha" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Label x:Name="fechaLabel" FontSize="16" TextColor="Black" />
+
+            <!-- Hora -->
+            <Label Text="Hora" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+            <Label x:Name="horaLabel" FontSize="16" TextColor="Black" />
+
+            <!-- Foro de preguntas -->
+            <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                <Image Source="question_icon.png" HeightRequest="20" WidthRequest="20" />
+                <Label Text="Foro de Preguntas"
+                       FontSize="16"
+                       TextColor="DarkBlue" />
+            </StackLayout>
+
+            <!-- Entrada de comentario -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10">
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="comentarioEntry"
+                           Placeholder="Escribe un comentario..."
+                           HorizontalOptions="FillAndExpand" />
+                    <Button Text="➤" FontSize="18"
+                            BackgroundColor="Transparent"
+                            Clicked="OnEnviarComentarioClicked" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Comentarios -->
+            <Label Text="Comentarios: 1" FontAttributes="Bold" FontSize="16" />
+
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10">
+                <StackLayout>
+                    <Label Text="Juan Gabriel 777" FontAttributes="Bold" />
+                    <Label x:Name="comentariosLabel"
+                           Text="yo considero que una muy buena actividad :p" />
+                    <Button Text="Responder"
+                            FontSize="12"
+                            BackgroundColor="#E0E0E0"
+                            CornerRadius="5" />
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -111,8 +111,8 @@
                      Spacing="0"
                      VerticalOptions="End">
             <Button Text="💵" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnHistorialTapped"  />
-            <Button Text="↩️" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand"  />
-            <Button Text="➕" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" />
+            <Button Text="↩️" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnTuEventoPage" />
+            <Button Text="➕" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnAgregareventoPage" />
             <Button Text="♡" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnImageTapped"/>
             <Button Text="🏆" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OntrofeosClicked"/>
         </StackLayout>

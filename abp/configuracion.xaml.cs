@@ -20,9 +20,9 @@ namespace abp
             await Navigation.PushAsync(new PerfilPage());
         }
 
-        private void OnAccesibilidadClicked(object sender, EventArgs e)
+        private async void OnAccesibilidadClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Accesibilidad", "Sección Accesibilidad", "OK");
+            await Navigation.PushAsync(new AccesibilidadPage());
         }
 
         private void OnNormasClicked(object sender, EventArgs e)

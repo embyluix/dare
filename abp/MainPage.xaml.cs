@@ -42,5 +42,14 @@ namespace abp
         {
             await Navigation.PushAsync(new buscador());
         }
+        private async void OnAgregareventoPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AgregarEventoPage());
+        }
+
+        private async void OnTuEventoPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MostrarEventosPage());
+        }
     }
 }

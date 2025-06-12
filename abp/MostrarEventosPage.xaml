@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.MostrarEventosPage"
+             Title="Eventos">
+
+    <StackLayout Padding="10" Spacing="10">
+        
+
+        <CollectionView x:Name="eventosCollectionView" SelectionMode="None" HeightRequest="500">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="10" BorderColor="LightGray" CornerRadius="8">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <!-- Imagen -->
+                            <Image WidthRequest="80" HeightRequest="80" Aspect="AspectFill"
+                                   Source="{Binding Imagen}" />
+
+                            <!-- Detalles -->
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Nombre}" FontSize="Medium" FontAttributes="Bold" />
+                                <Label Text="{Binding Descripcion}" FontSize="Small" LineBreakMode="TailTruncation" MaxLines="2"/>
+                                <Label Text="{Binding Fecha}" FontSize="Small" TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>

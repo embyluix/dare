@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.AgregarEventoPage"
+             Title="Agregar Evento"
+             BackgroundColor="#EAF0FB">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Label Text="Nombre del Evento" FontAttributes="Bold" />
+            <Entry x:Name="nombreEntry" Placeholder="Nombre del evento" />
+
+            <Label Text="Teléfono" FontAttributes="Bold" />
+            <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone" />
+
+            <Label Text="¿Acepta Donaciones?" FontAttributes="Bold" />
+            <CheckBox x:Name="donacionesCheckBox" />
+
+            <Label Text="Descripción" FontAttributes="Bold" />
+            <Editor x:Name="descripcionEditor" Placeholder="Descripción del evento" HeightRequest="100" />
+
+            <Label Text="Fecha" FontAttributes="Bold" />
+            <DatePicker x:Name="fechaPicker" />
+
+            <Label Text="Hora" FontAttributes="Bold" />
+            <TimePicker x:Name="horaPicker" />
+
+            <Label Text="Imagen del Evento" FontAttributes="Bold" />
+            <Image x:Name="eventoImage" HeightRequest="150" Aspect="AspectFill" />
+            <Button Text="Seleccionar Imagen" Clicked="OnSeleccionarImagenClicked" />
+
+            <Button Text="Guardar Evento" BackgroundColor="#007AFF" TextColor="White" Clicked="OnGuardarEventoClicked" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
