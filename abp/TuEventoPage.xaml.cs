@@ -9,10 +9,12 @@ namespace abp
     public partial class TuEventoPage : ContentPage
     {
         const string ComentarioKey = "comentario_guardado";
+        private Evento eventoActual; // ✅ Campo para usar en la edición
 
         public TuEventoPage(Evento evento)
         {
             InitializeComponent();
+            eventoActual = evento; // ✅ Guardamos el evento para luego pasarlo a la página de edición
 
             // Llenar campos con los datos del evento recibido
             nombreEventoLabel.Text = evento.Nombre;
@@ -33,13 +35,14 @@ namespace abp
                 eventoImagen.Source = "default_evento.png"; // Imagen por defecto
             }
 
-            // (Opcional) Comentario guardado
-            string comentarioGuardado = Preferences.Get("comentario_guardado", string.Empty);
+            // Comentario guardado
+            string comentarioGuardado = Preferences.Get(ComentarioKey, string.Empty);
             if (!string.IsNullOrEmpty(comentarioGuardado))
             {
                 comentariosLabel.Text = comentarioGuardado;
             }
         }
+
         private void OnEnviarComentarioClicked(object sender, EventArgs e)
         {
             string nuevoComentario = comentarioEntry.Text?.Trim();
@@ -51,6 +54,12 @@ namespace abp
 
                 DisplayAlert("Comentario guardado", "Tu comentario ha sido guardado", "OK");
             }
+        }
+
+        private async void editarclick(object sender, EventArgs e)
+        {
+            // ✅ Ir a la página de edición con el evento actual
+            await Navigation.PushAsync(new EditarEventoPage(eventoActual));
         }
     }
 }
