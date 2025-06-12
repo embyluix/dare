@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.RegistroPage"
+             Title="Registrarse"
+             BackgroundColor="#E6F0FF">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <!-- Icono de usuario -->
+            <Image Source="user_icon.png"
+                   HeightRequest="60"
+                   HorizontalOptions="Center" />
+
+            <!-- Nombre -->
+            <Label Text="Nombre" FontAttributes="Bold"/>
+            <Entry Placeholder="Ingrese un nombre de usuario" x:Name="entryNombre"/>
+
+            <!-- Apellidos -->
+            <Label Text="Apellidos" FontAttributes="Bold"/>
+            <Entry Placeholder="Ingrese su apellido" x:Name="entryApellido"/>
+
+            <!-- Fecha de nacimiento -->
+            <Frame BackgroundColor="#F5E9F7" CornerRadius="10" Padding="10">
+                <StackLayout Spacing="5">
+                    <Label Text="Selecciona la fecha de tu nacimiento" FontSize="14"/>
+                    <Label Text="Agregar Fecha" FontSize="16" FontAttributes="Bold"/>
+                    <DatePicker x:Name="datePickerNacimiento" Format="MM/dd/yyyy" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Teléfono -->
+            <Label Text="Teléfono" FontAttributes="Bold"/>
+            <Entry Placeholder="Ingrese un número de teléfono" Keyboard="Telephone" x:Name="entryTelefono"/>
+
+            <!-- Correo -->
+            <Label Text="Correo Electrónico" FontAttributes="Bold"/>
+            <Entry Placeholder="Ingrese un correo electrónico" Keyboard="Email" x:Name="entryCorreo"/>
+
+            <!-- Contraseña -->
+            <Label Text="Contraseña" FontAttributes="Bold"/>
+            <Entry Placeholder="Ingrese una contraseña" IsPassword="True" x:Name="entryContrasena"/>
+
+            <!-- Descripción -->
+            <Label Text="Descripción de ti" FontAttributes="Bold"/>
+            <Entry Placeholder="Agrega una breve descripción de ti" x:Name="entryDescripcion"/>
+
+            <!-- Botón de registro -->
+            <Button Text="Registrar" BackgroundColor="#C5CAE9" TextColor="Black" Clicked="OnRegistrarClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.PruebaPage"
+             Title="Datos Guardados"
+             BackgroundColor="#E6F0FF">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Label Text="Datos Registrados" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="labelNombre" />
+            <Label x:Name="labelApellido" />
+            <Label x:Name="labelFecha" />
+            <Label x:Name="labelTelefono" />
+            <Label x:Name="labelCorreo" />
+            <Label x:Name="labelContrasena" />
+            <Label x:Name="labelDescripcion" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

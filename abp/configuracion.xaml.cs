@@ -22,17 +22,17 @@ namespace abp
 
         private async void OnAccesibilidadClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AccesibilidadPage());
+            await Navigation.PushAsync(new RegistroPage());
         }
 
-        private void OnNormasClicked(object sender, EventArgs e)
+        private async void OnNormasClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Normas Comunitarias", "Sección Normas Comunitarias", "OK");
+            await Navigation.PushAsync(new normas());
         }
 
-        private void OnPermisosClicked(object sender, EventArgs e)
+        private  async void  OnPermisosClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Permisos", "Sección Permisos", "OK");
+            await Navigation.PushAsync(new PruebaPage());
         }
 
         private void OnTemaClicked(object sender, EventArgs e)

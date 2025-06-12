@@ -62,6 +62,17 @@ namespace abp
                 // Ejemplo: await Navigation.PushAsync(new EditarEventoPage(eventoSeleccionado));
             }
         }
+        private async void OnTuEventoClicked(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            var eventoSeleccionado = button?.BindingContext as Evento;
+
+            if (eventoSeleccionado != null)
+            {
+                await Navigation.PushAsync(new TuEventoPage(eventoSeleccionado));
+            }
+        }
+
 
 
     }

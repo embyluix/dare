@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.normas"
+             Title="Normas Comunitarias y Ayuda"
+             BackgroundColor="#E6F0FF">
+
+    <StackLayout Padding="20" Spacing="20">
+
+        <!-- Botón de regreso -->
+        <Image Source="back_icon.png"
+               HeightRequest="24"
+               WidthRequest="24" />
+
+        <!-- Título -->
+        <Label Text="Normas Comunitarias y Ayuda"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Black" />
+
+        <!-- Subtítulo -->
+        <Label Text="Se le pide a la comunidad"
+               FontSize="14"
+               TextColor="#3366CC" />
+
+        <!-- Caja de texto de advertencia -->
+        <Frame BackgroundColor="#FBEFF2" CornerRadius="10" Padding="15">
+            <Label Text="Atención y términos de uso y confidencialidad están para nuestra datos reales y personales que pueden ser utilizados para fines colaborativos y éticos que ayudan a demás personas, si te preocupa que alguno de estos datos tengan un uso inadecuado, revisa nuestros términos de uso y privacidad.\n\nTambién revisa el apartado:\n\nHistorial de donaciones"
+                   FontSize="12"
+                   TextColor="Black" />
+        </Frame>
+
+        <!-- Sección de números de ayuda -->
+        <Label Text="📞 Números de Ayuda"
+               FontSize="14"
+               FontAttributes="Bold"
+               TextColor="Black" />
+
+        <!-- Teléfonos -->
+        <StackLayout Spacing="10">
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Image Source="phone_icon.png"
+                       HeightRequest="20"
+                       WidthRequest="20" />
+                <Label Text="8475872878"
+                       FontSize="14"
+                       TextColor="Black" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Image Source="phone_icon.png"
+                       HeightRequest="20"
+                       WidthRequest="20" />
+                <Label Text="5656378935"
+                       FontSize="14"
+                       TextColor="Black" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

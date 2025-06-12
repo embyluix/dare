@@ -1,31 +1,65 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="abp.MostrarEventosPage"
-             Title="Eventos">
+             Title="Tus Eventos"
+             BackgroundColor="#D9E5F6">
 
-    <StackLayout Padding="10" Spacing="10">
-        
+    <StackLayout Padding="10">
 
-        <CollectionView x:Name="eventosCollectionView" SelectionMode="None" HeightRequest="500">
+        <!-- Encabezado -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+            <Label Text="Tus Eventos" FontSize="20" FontAttributes="Bold" />
+        </StackLayout>
+
+        <!-- Lista de eventos -->
+        <CollectionView x:Name="eventosCollectionView" SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="10" BorderColor="LightGray" CornerRadius="8">
-                        <StackLayout Orientation="Horizontal" Spacing="10">
-                            <!-- Imagen -->
-                            <Image WidthRequest="80" HeightRequest="80" Aspect="AspectFill"
-                                   Source="{Binding Imagen}" />
+                    <Frame Padding="10" Margin="10" CornerRadius="15" BackgroundColor="#B6C9E2" HasShadow="True">
 
-                            <!-- Detalles -->
-                            <StackLayout VerticalOptions="CenterAndExpand">
-                                <Label Text="{Binding Nombre}" FontSize="Medium" FontAttributes="Bold" />
-                                <Label Text="{Binding Descripcion}" FontSize="Small" LineBreakMode="TailTruncation" MaxLines="2"/>
-                                <Label Text="{Binding Fecha}" FontSize="Small" TextColor="Gray" />
+                        <StackLayout Spacing="10">
+
+                            <!-- Nombre del evento y campanita -->
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="Medium" Grid.Column="0"/>
+                                <Image Source="{Binding IconoNotificacion}" HeightRequest="20" WidthRequest="20" Grid.Column="1"/>
+                            </Grid>
+
+                            <!-- Imagen y descripción -->
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Image WidthRequest="80" HeightRequest="80" Aspect="AspectFill"
+                                       Source="{Binding Imagen}" />
+                                <Label Text="{Binding Descripcion}" FontSize="Small" LineBreakMode="WordWrap"
+                                       VerticalOptions="StartAndExpand" WidthRequest="160" />
                             </StackLayout>
+
+                            <!-- Botones de acción -->
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+                                <Button Text="tu evento"
+                                 BackgroundColor="#D3D8F5"
+                                 TextColor="Black"
+                                 CornerRadius="10"
+                                 HeightRequest="35"
+                                 Clicked="OnTuEventoClicked"/>
+
+                            </StackLayout>
+
+                            <!-- Íconos adicionales -->
+                            <StackLayout Orientation="Horizontal" Spacing="45" HorizontalOptions="CenterAndExpand">
+                                <Label Text="♡" FontSize="30"/>
+                                <Label Text="🗨️" FontSize="30"/>
+                                <Label Text="❓" FontSize="30"/>
+                            </StackLayout>
+
                         </StackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </StackLayout>
 
+    </StackLayout>
 </ContentPage>
