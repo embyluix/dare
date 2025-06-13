@@ -1,6 +1,7 @@
-﻿using System;
+﻿using abp1;
+using DAREApp;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace abp
 {
@@ -10,19 +11,12 @@ namespace abp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
-        }
+            bool isLoggedIn = Preferences.Get("IsLoggedIn", false);
 
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            if (isLoggedIn)
+                MainPage = new NavigationPage(new MainPage());  // Ya está logueado
+            else
+                MainPage = new NavigationPage(new InicioSesionPage()); // Necesita loguearse
         }
     }
 }

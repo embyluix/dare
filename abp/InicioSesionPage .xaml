@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DAREApp.InicioSesionPage"
+             BackgroundColor="#d6e3ff">
+
+    <StackLayout Padding="20,50" Spacing="15">
+
+        <!-- Logo -->
+        <Image Source="dare_logo.png"
+               HeightRequest="100"
+               HorizontalOptions="Center" />
+
+        <!-- Título -->
+        <Label Text="DARE"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="#0077cc"
+               HorizontalOptions="Center" />
+
+        <!-- Subtítulo -->
+        <Label Text="Ingresa a tu cuenta"
+               FontSize="18"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+        <!-- Botón: Iniciar sesión -->
+        <Button Text="¿Ya tienes cuenta? Iniciar sesión"
+                BackgroundColor="#B8E986"
+                TextColor="Black"
+                CornerRadius="10"
+                Margin="0,10"
+                Clicked="inicio"/>
+
+        <!-- Botón: Crear cuenta -->
+        <Button Text="Crear nueva cuenta"
+                BackgroundColor="White"
+                TextColor="#0077cc"
+                BorderColor="#0077cc"
+                BorderWidth="1"
+                CornerRadius="10"
+                Clicked="crear"/>
+
+        <!-- Botón: Omitir -->
+        <Button Text="Omitir inicio de sesión"
+                BackgroundColor="LightGray"
+                TextColor="Black"
+                CornerRadius="10"
+                Clicked="omitir"/>
+    </StackLayout>
+
+</ContentPage>

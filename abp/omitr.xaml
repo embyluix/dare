@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp.omitr"
+             BackgroundColor="#D6E1FF"
+             Title="DARE">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Padding="10" ColumnSpacing="10" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DARE" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Image Source="logo_placeholder.png" HeightRequest="30" WidthRequest="30" Grid.Column="1"/>
+            <StackLayout Orientation="Horizontal" Spacing="10" Grid.Column="2">
+                <!-- Ícono Usuario -->
+                <Label Text="👤" FontSize="18" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPerfilTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Ícono Lupa -->
+                <Label Text="🔍" FontSize="18" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBusquedaTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Ícono Campana -->
+                <Label Text="🔔" FontSize="18" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnNotificacionesTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Grid>
+
+        <!-- Scrollable Cards -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="10" Spacing="20">
+                <!-- CARD 1 -->
+                <Frame BackgroundColor="#A9C9FF" CornerRadius="20" Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEventoTapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout Spacing="10">
+                        <Image Source="Donacion.jpg" Aspect="AspectFill" HeightRequest="150"/>
+                        <Label Text="Donación de alimentos"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="Black"/>
+                        <Label Text="El propósito del evento es brindar alimentos de forma voluntaria."
+                               FontSize="12"
+                               TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Button Text="DONAR" BackgroundColor="LightGreen" TextColor="Black"/>
+                            <Button Text="REGISTRARSE" BackgroundColor="LightGray" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Label Text="♡ 🗨️ ❓" FontSize="18"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- CARD 2 -->
+                <Frame BackgroundColor="#A9C9FF" CornerRadius="20" Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEventoTapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout Spacing="10">
+                        <Image Source="Donacion.jpg" Aspect="AspectFill" HeightRequest="150"/>
+                        <Label Text="Donación de alimentos"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="Black"/>
+                        <Label Text="El propósito del evento es brindar alimentos de forma voluntaria."
+                               FontSize="12"
+                               TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Button Text="DONAR" BackgroundColor="LightGreen" TextColor="Black"/>
+                            <Button Text="REGISTRARSE" BackgroundColor="LightGray" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Label Text="♡ 🗨️ ❓" FontSize="18"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <StackLayout Grid.Row="2"
+                     Orientation="Horizontal"
+                     BackgroundColor="#A1F3FF"
+                     HeightRequest="60"
+                     HorizontalOptions="FillAndExpand"
+                     Padding="0"
+                     Spacing="0"
+                     VerticalOptions="End">
+            <Button Text="💵" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnHistorialTapped"  />
+            <Button Text="↩️" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnTuEventoPage" />
+            <Button Text="➕" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnAgregareventoPage" />
+            <Button Text="♡" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OnImageTapped"/>
+            <Button Text="🏆" FontSize="20" Padding="0" HorizontalOptions="FillAndExpand" Clicked="OntrofeosClicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

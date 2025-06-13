@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abp1.LoginPage"
+             Title="Iniciar Sesión">
+    <StackLayout Padding="20" Spacing="10">
+        <Label Text="Correo electrónico" />
+        <Entry x:Name="EntryCorreo" Placeholder="Correo" Keyboard="Email" />
+
+        <Label Text="Contraseña" />
+        <Entry x:Name="EntryContrasena" Placeholder="Contraseña" IsPassword="True" />
+
+        <Button Text="Iniciar Sesión" Clicked="OnLoginClicked" />
+    </StackLayout>
+</ContentPage>
